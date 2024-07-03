@@ -1,0 +1,70 @@
+/* Header Section */
+.header {
+  font-family: "Arial", Courier, monospace;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #303141;
+  color: white;
+  border-bottom: 2px solid #4c6085;
+  font-weight: bold;
+}
+
+/* Left and Right Sections */
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Divider Between Logo and Links */
+.header-divider {
+  width: 1px;
+  height: 50px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+/* Links Section */
+.header-links {
+  display: flex;
+}
+
+/* Right Section Links Styling */
+.header-right span {
+  margin-left: 20px;
+}
+
+/* Styling for Button*/
+
+.sign-in-button {
+  color: #303141;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #39e29d;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-button img.user-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Hover Effect on Buttons */
+.header-right button:hover {
+  background-color: #555;
+}
+.cart {
+  width: 24px;
+  margin-left: 5px;
+}
