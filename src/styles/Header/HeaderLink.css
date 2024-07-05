@@ -14,11 +14,27 @@
 }
 
 .header-link-text:hover {
-  color: #ccc; /* Change color on hover */
+  color: #ccc;
 }
 
 .down-arrow-icon {
   width: 12px;
   height: 12px;
   margin-left: 5px;
+}
+
+@media (max-width: 1024px) {
+  .header-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-link-text {
+    font-size: 16px;
+  }
+
+  .down-arrow-icon {
+    width: 14px;
+    height: 14px;
+  }
 }

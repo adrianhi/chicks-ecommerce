@@ -1,13 +1,13 @@
 import "./styles/App.css";
 
-//Components
+// Components
 import ComboBox from "@components/ComboBox/ComboBox";
 import Header from "@components/Header/Header.tsx";
 import SearchBar from "@components/SearchBar/SearchBar";
 import CardContainer from "@components/CardContainer/CardContainer";
 import Box from "@components/Box/Box";
 
-//SVG
+// SVG
 import downArrowSvg from "@public/down-arrow.svg";
 import feather from "@public/feather.svg";
 import bag from "@public/money-bag.svg";
