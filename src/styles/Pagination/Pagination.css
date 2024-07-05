@@ -1,0 +1,33 @@
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.page-item.active .page-link {
+  background-color: #5762d5; /* Fondo para el elemento activo */
+}
+
+.pagination-btn {
+  width: 24px;
+  height: 24px; /* Ajusta la altura para alinear con el texto */
+  vertical-align: middle;
+  margin-right: 5px; /* Margen derecho para separar el icono del texto */
+}

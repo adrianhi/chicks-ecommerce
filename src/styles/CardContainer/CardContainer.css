@@ -1,0 +1,32 @@
+.card-container {
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.9);
+  border: 2px solid #60646b;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card-container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-container-message {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card-container-footer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

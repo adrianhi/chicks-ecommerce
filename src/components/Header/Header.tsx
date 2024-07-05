@@ -21,8 +21,10 @@ const Header: React.FC = () => {
       </div>
       <div className="header-right">
         <HeaderLink text="USD" href="#" />
-        <span>Cart (5)</span>
-        <img src={cart} alt="cart" className="cart" />
+        <div className="cart-container">
+          <img src={cart} alt="cart" className="cart" />
+          <span>Cart (5)</span>
+        </div>
         <button className="sign-in-button">
           Sign In <img src={user} alt="User" className="user-icon" />
         </button>

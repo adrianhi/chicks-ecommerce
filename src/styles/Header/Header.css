@@ -62,9 +62,12 @@
 
 /* Hover Effect on Buttons */
 .header-right button:hover {
-  background-color: #555;
+  background-color: #2eeea1;
 }
 .cart {
   width: 24px;
-  margin-left: 5px;
+}
+.cart-container {
+  display: flex;
+  align-items: center;
 }

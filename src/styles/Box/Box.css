@@ -1,0 +1,33 @@
+.box {
+  padding: 5px 10px;
+  background-color: rgba(70, 69, 69, 0.5);
+  border-radius: 5px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: space-around;
+}
+
+.container-all {
+  display: flex;
+  align-items: center;
+}
+
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;}
+
+.title {
+  color: rgb(151, 145, 145);
+  margin-bottom: 5px;
+}
+
+.all {
+  color: white;
+}
+.icon {
+  width: 24px;
+}
