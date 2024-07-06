@@ -3,11 +3,11 @@ import "@styles/Header/Header.css";
 import logo from "@public/wz_light.svg";
 import user from "@public/user.svg";
 import cart from "@public/cart.svg";
-import menuIcon from "@public/menu-icon.svg";
-import closeIcon from "@public/close-icon.svg";
-
 import HeaderLink from "./HeaderLink";
-import { headerLinks } from "@data/HeaderLinks.ts";
+import {
+  headerLinks,
+  HeaderLink as HeaderLinkType,
+} from "@data/HeaderLinks.ts";
 
 const Menu: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,13 +25,15 @@ const Menu: React.FC = () => {
         <div className="header-divider"></div>
         <nav className={`menu-nav ${isMobileMenuOpen ? "open" : ""}`}>
           <ul>
-            {headerLinks.map((link, index) => (
+            {headerLinks.map((link: HeaderLinkType, index: number) => (
               <HeaderLink key={index} text={link.text} href={link.href} />
             ))}
           </ul>
         </nav>
         <div className={`menu-actions ${isMobileMenuOpen ? "open" : ""}`}>
-          <div className="currency-selector">USD</div>
+          <div className="currency-selector">
+            <HeaderLink text="USD" href="#" />
+          </div>
           <div className="cart">
             <img src={cart} alt="cart" className="cart-icon" />
             <span>Cart (5)</span>
@@ -42,7 +44,9 @@ const Menu: React.FC = () => {
         </div>
       </div>
       <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-        <img src={isMobileMenuOpen ? closeIcon : menuIcon} alt="Menu Icon" />
+        <div className={`bar ${isMobileMenuOpen ? "rotate-bar1" : ""}`}></div>
+        <div className={`bar ${isMobileMenuOpen ? "fade-bar" : ""}`}></div>
+        <div className={`bar ${isMobileMenuOpen ? "rotate-bar2" : ""}`}></div>
       </button>
     </header>
   );
