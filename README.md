@@ -6,6 +6,9 @@ An e-commerce platform mockup for selling guns, built using Vite, React, and Typ
 
 This project is a mockup of an e-commerce platform for selling guns. It is built using Vite for fast development, React for building user interfaces, and TypeScript for type safety.
 
+## Demo
+https://gunsecommerce.netlify.app/
+
 ## Getting Started
 
 These instructions will help you set up and run the project on your local machine for development and testing purposes.
