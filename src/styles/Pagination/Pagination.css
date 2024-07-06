@@ -3,6 +3,8 @@
   padding: 0;
   display: flex;
   justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  margin: 0;
 }
 
 .page-item {
@@ -15,10 +17,16 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 15px;
   text-decoration: none;
   color: #fff;
   border-radius: 5px;
+  transition: background-color 0.3s, border 0.3s; /* Transición suave para el fondo y borde */
+}
+
+.page-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo al pasar el ratón */
 }
 
 .page-item.active .page-link {
@@ -28,6 +36,35 @@
 .pagination-btn {
   width: 24px;
   height: 24px; /* Ajusta la altura para alinear con el texto */
-  vertical-align: middle;
-  margin-right: 5px; /* Margen derecho para separar el icono del texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #5762d5 1px solid;
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s, border 0.3s; /* Transición suave para el fondo y borde */
+}
+
+.pagination-btn img {
+  width: 16px; /* Ajusta el tamaño del icono */
+  height: 16px;
+}
+
+.page-link:hover .pagination-btn {
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .page-link {
+    padding: 8px 10px; /* Reducir el relleno en pantallas más pequeñas */
+  }
+
+  .pagination-btn {
+    width: 20px;
+    height: 20px; /* Reducir el tamaño del icono en pantallas más pequeñas */
+  }
+
+  .pagination-btn img {
+    width: 14px; /* Ajusta el tamaño del icono en pantallas más pequeñas */
+    height: 14px;
+  }
 }

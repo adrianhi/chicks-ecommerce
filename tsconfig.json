@@ -1,4 +1,17 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@public/*": ["public/*"],
+      "@data/*": ["src/data/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@assets/*": ["src/assets/*"],
+      "@images/*": ["public/images/*"],
+      "@styles/*": ["src/styles/*"]
+    }
+  },
+
   "files": [],
   "references": [
     {
@@ -6,7 +19,6 @@
     },
     {
       "path": "./tsconfig.node.json"
-    },
-    
+    }
   ]
 }

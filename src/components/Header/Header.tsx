@@ -1,36 +1,55 @@
+import React, { useState } from "react";
 import "@styles/Header/Header.css";
 import logo from "@public/wz_light.svg";
 import user from "@public/user.svg";
 import cart from "@public/cart.svg";
 import HeaderLink from "./HeaderLink";
-import { headerLinks } from "@data/HeaderLinks.ts";
+import {
+  headerLinks,
+  HeaderLink as HeaderLinkType,
+} from "@data/HeaderLinks.ts";
 
-const Header: React.FC = () => {
+const Menu: React.FC = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <header className="header">
-      <div className="header-left">
-        <div className="logo">
+    <header className="menu-header">
+      <div className="menu-container">
+        <div className="menu-logo">
           <img src={logo} alt="Logo de MW" />
         </div>
         <div className="header-divider"></div>
-        <div className="header-links">
-          {headerLinks.map((link: string, index: number) => (
-            <HeaderLink key={index} text={link.text} href={link.href} />
-          ))}
+        <nav className={`menu-nav ${isMobileMenuOpen ? "open" : ""}`}>
+          <ul>
+            {headerLinks.map((link: HeaderLinkType, index: number) => (
+              <HeaderLink key={index} text={link.text} href={link.href} />
+            ))}
+          </ul>
+        </nav>
+        <div className={`menu-actions ${isMobileMenuOpen ? "open" : ""}`}>
+          <div className="currency-selector">
+            <HeaderLink text="USD" href="#" />
+          </div>
+          <div className="cart">
+            <img src={cart} alt="cart" className="cart-icon" />
+            <span>Cart (5)</span>
+          </div>
+          <button className="sign-in">
+            Sign In <img src={user} alt="User" className="user-icon" />
+          </button>
         </div>
       </div>
-      <div className="header-right">
-        <HeaderLink text="USD" href="#" />
-        <div className="cart-container">
-          <img src={cart} alt="cart" className="cart" />
-          <span>Cart (5)</span>
-        </div>
-        <button className="sign-in-button">
-          Sign In <img src={user} alt="User" className="user-icon" />
-        </button>
-      </div>
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <div className={`bar ${isMobileMenuOpen ? "rotate-bar1" : ""}`}></div>
+        <div className={`bar ${isMobileMenuOpen ? "fade-bar" : ""}`}></div>
+        <div className={`bar ${isMobileMenuOpen ? "rotate-bar2" : ""}`}></div>
+      </button>
     </header>
   );
 };
 
-export default Header;
+export default Menu;

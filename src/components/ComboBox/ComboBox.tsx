@@ -1,3 +1,4 @@
+import React from "react";
 import "@styles/ComboBox/ComboBox.css";
 import downArrowSvg from "@public/down-arrow.svg";
 import sword from "@public/sword.svg";
