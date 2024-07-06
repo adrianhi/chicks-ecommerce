@@ -1,8 +1,21 @@
-import React from "react";
 import "@styles/SaleCard/SaleCard.css";
 import cart from "@public/cart.svg";
-
-const SaleCard = ({ image, title, price, oldPrice, inStock, onSale }) => {
+interface Product {
+  image: string;
+  title: string;
+  price: number;
+  oldPrice?: number; // Optional prop
+  inStock: boolean;
+  onSale: boolean;
+}
+const SaleCard: React.FC<Product> = ({
+  image,
+  title,
+  price,
+  oldPrice,
+  inStock,
+  onSale,
+}) => {
   return (
     <div className="card">
       <div className="card-header">

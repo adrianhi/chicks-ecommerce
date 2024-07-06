@@ -18,7 +18,7 @@ const CardContainer: React.FC = () => {
         ))}
       </div>
       <div className="card-container-footer">
-       <Pagination/>
+        <Pagination />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import HeaderLink from "./HeaderLink";
 import {
   headerLinks,
   HeaderLink as HeaderLinkType,
-} from "@data/HeaderLinks.ts";
+} from "../../data/HeaderLinks.ts";
 
 const Menu: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
